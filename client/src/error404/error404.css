@@ -1,0 +1,15 @@
+.page-not-found-container{
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-color: #0A2647;
+}
+.page-not-found-container>h1{
+    color: white;
+    font-size: 4rem;
+    text-shadow: 0px 35px 15px ;
+}
+.page-not-found-container>h1>span{
+    color: rgb(255, 69, 69);
+}

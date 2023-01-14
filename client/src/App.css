@@ -1,0 +1,33 @@
+.form-input{
+  position: relative;
+}
+
+.form-input>input{
+  width: 20rem;
+  height: 3rem;
+  border: 1px solid black;
+  padding: 1rem;
+  border-radius: 5px;
+  outline: none;
+}
+.form-input>label{
+  position: absolute;
+  left: 0;
+  padding: 1rem;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.form-input>input:valid ~ label,
+.form-input>input:focus ~ label{
+  transform: translateX(1rem) translateY(-.5rem);
+  letter-spacing: .2rem;
+  background-color: white;
+  padding: 0 1rem ;
+  color: #0081C9;
+  font-size: .8rem;
+}
+.form-input>input:valid,
+.form-input>input:focus{
+  border-color: #0081C9;
+}

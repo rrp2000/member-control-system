@@ -1,0 +1,53 @@
+.admin-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 100vh;
+    background-color:#0A2647;
+    min-height: 100vh;
+}
+
+.admin-members{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 70%;
+    min-height: 80vh;
+}
+.admin-member{
+    display: flex;
+    text-align: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 3rem;
+    min-height: 75vh;
+    gap: 1rem;
+}
+
+.admin-add-member{
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    justify-self: flex-end;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+    height: 80vh;
+
+}
+.admin-add-member >button{
+    padding: .75rem 3rem;
+    border-radius: 10px;
+    background-color: #0081C9;
+    border: none;
+    color:white;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.admin-add-member>button:hover{
+    background-color: #0083c979
+}

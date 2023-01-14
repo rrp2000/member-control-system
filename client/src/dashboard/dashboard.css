@@ -1,0 +1,103 @@
+.dashboard-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color:#0A2647;
+}
+.dashboard{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    padding: 2rem;
+    gap: 3rem;
+}
+.dashboard>h1{
+    color: white;
+    text-shadow: 0px 10px 30px rgba(255,255,255);
+}
+.dashboard>h1>span{
+    color: #0081C9;
+    text-shadow: 0px 10px 30px rgba(255,255,255);
+}
+.dashboard-info{
+    display: flex;
+    width: 80%;
+    justify-content: space-around;
+    gap: 4rem;
+}
+
+.dashboard-info-sales,
+.dashboard-info-members{
+    display: flex;
+    background-color: white;
+    flex-direction: column;
+    padding: 5rem;
+    gap: 2rem;
+    border-radius: 10px;
+    box-shadow: 0px 3px 10px rgba(255,255,255);
+    min-width: 30rem;
+    align-items: center;
+    justify-self: center;
+
+}
+.dashboard-info-sales-details,
+.dashboard-info-members-details{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+.dashboard-info-sales-details>span,
+.dashboard-info-members-details>span{
+    font-size: 3rem;
+    color: #0081C9;
+}
+
+.dashboard-animate{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:10vh;
+    width: 90%;
+    gap: 2rem;
+}
+
+.dashboard-animate-element{
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: 50%;
+    border: 2px solid #0081C9;
+    background-color: #0081C9;
+    box-shadow: 0px 2px 5px ;
+    transition: 0.5s;
+}
+
+#dashboard-animate1{
+    animation: upAndDown 2s linear infinite;
+    animation-delay: 0.2s;
+}
+#dashboard-animate2{
+    animation: upAndDown 2s linear infinite;
+    animation-delay: 0.4s;
+}
+#dashboard-animate3{
+    animation: upAndDown 2s linear infinite;
+    animation-delay: 0.6s;
+}
+#dashboard-animate4{
+    animation: upAndDown 2s linear infinite;
+    animation-delay: 0.8s;
+}
+
+@keyframes upAndDown{
+    25% {
+        transform: translateY(0.5rem);
+    }
+    75%{
+        transform: translateY(-0.5rem);
+    }
+}
