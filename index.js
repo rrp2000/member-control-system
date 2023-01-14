@@ -51,25 +51,26 @@ app.use(passport.initialize())
 //passport configuration
 require("./config/passport")(passport)
 
+mongoose.set('strictQuery', false)
+mongoose.connect("mongodb+srv://spacespider:admin@cluster0.0ps1ymn.mongodb.net/recovero?retryWrites=true&w=majority", { useNewUrlParser: true})
+.then(() => {
+    console.log('Connected to mongodb')
+})
+.catch((err)=>{
+    console.log(err)
+})
+
 
 if(process.env.NODE_ENV === "production"){
     const path = require('path')
-
-    app.get("/", (req,res)=>{
-        app.use(express.static(path.resolve(__dirname,"client","build")))
+    app.use(express.static(path.join(__dirname,"./client/build")))
+    
+    app.get("*", (req,res)=>{
         res.sendFile(path.resolve(__dirname,"client","build","index.html"))
     })
     
 }
 
-mongoose.set('strictQuery', false)
-mongoose.connect("mongodb+srv://spacespider:admin@cluster0.0ps1ymn.mongodb.net/recovero?retryWrites=true&w=majority", { useNewUrlParser: true})
-.then(() => {
-    console.log('Connected to mongodb')
-    app.listen(process.env.PORT||4000,()=>{
-        console.log("Express running on port",process.env.PORT||4000)
-    })
-})
-.catch((err)=>{
-    console.log(err)
+app.listen(process.env.PORT||4000,()=>{
+    console.log("Express running on port",process.env.PORT||4000)
 })
