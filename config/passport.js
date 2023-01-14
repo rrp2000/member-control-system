@@ -5,7 +5,7 @@ const User = mongoose.model("User");
 
 const opts = {};
 opts.jwtFromRequest = ExtractJwt.fromAuthHeaderAsBearerToken();
-opts.secretOrKey = process.env.JWT_SECRET;
+opts.secretOrKey = "recovero-assignment";
 
 module.exports = (passport) => {
   passport.use(
